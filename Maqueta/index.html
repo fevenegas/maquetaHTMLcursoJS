@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8"/>
         <title>Maquetación para el Master de Frameworks para JavaScript</title>
+
+        <!--Hoja de Estilos-->
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
     </head>
     <body>
         <header id="header">
@@ -25,8 +28,47 @@
                         <li><a href="#">Página 2</a></li>
                     </ul>
                 </nav>
+
+                <!-- Limpiar floats-->
+                <div class="clearfix"></div>
             </div>
-            
         </header>
+
+        <div id="slider" class="slider-big">
+            <h1>Bienvenido a la página creada por Fabián Venegas para el curso de FrameworksJS</h1>
+            <a href="#" class="btn-white">Ir al blog</a>
+        </div>
+
+        <div class="center">
+            <section id="content">
+                <h2>Últimos artículos</h2>
+                <!-- Listado Articulos -->
+            </section>
+
+            <aside id="sidebar">
+                <div id="nav-blog" class="sidebar-item">
+                    <h3>Puedes hacer esto</h3>
+                    <a href="#" class="btn btn-success">Crear artículo</a>
+                </div>
+                <div id="search" class="sidebar-item">
+                    <h3>Buscador</h3>
+                    <p>Encuentra el artículo que buscas</p>
+                    <form>
+                        <input type="text" name="search" />
+                        <input type="submit" name="submit" value="Buscar" class="btn"/>
+                    </form>
+                </div>
+            </aside>
+
+            <div class="clearfix"></div>
+        </div>
+
+        <footer id="footer">
+            <div class="center">
+                <p>
+                    &copy; Página para curso de Master en Frameworks para JavaScript, creada por Fabián Venegas
+                </p>
+            </div>
+        </footer>
     </body>
 </html>
