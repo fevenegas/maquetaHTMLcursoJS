@@ -8,23 +8,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
 
         <!-- Script JS-->
-        <script type="text/javascript">
-            window.addEventListener("load", function(){
-                var template = document.getElementById("article-template");
-                var articles = document.getElementById("articles");
-            
-                for (var i = 0; i <= 5; i++) {
-                    var clonado = template.cloneNode(true);
-                    clonado.removeAttribute("id");
-
-                    var h2 = clonado.getElementsByTagName("h2")[0];
-
-                    h2.innerHTML = h2.textContent + ' ' + i;
-                    articles.appendChild(clonado);
-                }
-            })
-            
-        </script>
+        
     </head>
     <body>
         <header id="header">
@@ -53,30 +37,36 @@
             </div>
         </header>
 
-        <div id="slider" class="slider-big">
-            <h1>Bienvenido a la página creada por Fabián Venegas para el curso de FrameworksJS</h1>
-            <a href="#" class="btn-white">Ir al blog</a>
-        </div>
-
         <div class="center">
-            <section id="content">
-                <h2 class="subheader">Últimos artículos</h2>
+            <section id="content">              
+                <h1 class="subheader">Formulario</h1>
 
-                <!-- Listado Articulos -->
-                <div id="articles">
-                    <article class="article-item" id="article-template">
-                        <div class="image-wrap">
-                            <img src="https://images.unsplash.com/photo-1601625463687-25541fb72f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="Imagen sabana"/>
-                        </div>
-                        
-                        <h2>Artículo de prueba</h2>
-                        <span class="date">Hace 5 minutos</span>
-                        <a href="#">Leer más</a>
-                        <div class="clearfix"
-                    </article>
-                    <!-- Añadir artículos vía JS-->
-                </div>
-                
+                <form class="mid-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Biografía</label>
+                        <textarea name="bio"></textarea>
+                    </div>
+
+                    <div class="form-group radiobuttons">
+                        <input type="radio" name="genero" value="hombre"/> Hombre
+                        <input type="radio" name="genero" value="mujer"/> Mujer
+                        <input type="radio" name="genero" value="otro"/> Otro
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <input type="submit" value="Enviar" class="btn btn-success"/>
+                </form>
             </section>
 
             <aside id="sidebar">
